@@ -1,5 +1,18 @@
 # Operations on iterables
 
+## Collections
+
+built in collections: 
+dict, list, set, tuple
+
+module: collections
+usefull dedicated use of collections tools (ex: Counter)
+
+## sequence types
+list, tuple, range
+
+## sets
+set, frozenset
 
 ## iterators and generators
 
