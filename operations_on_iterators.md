@@ -1,12 +1,22 @@
-# Operations on iterables
+# Operations on iterators
 
-## Collections
+## Collections module: basics
 
 built in collections: 
 dict, list, set, tuple
 
-module: collections
-usefull dedicated use of collections tools (ex: Counter)
+Dedicated use of collections tools
+* namedtuple()
+* deque
+* ChainMap
+* Counter
+* OrderedDict
+* defaultdict
+* UserDict
+* UserList
+* UserString
+
+Some of those can be subject to a daily python on there own!
 
 ## sequence types
 list, tuple, range
@@ -24,7 +34,7 @@ warning slice: extended indexing syntax
 
 ## Functions to work with lists
 
-* len
+* len - 
 * all
 * any
 * min
@@ -40,8 +50,7 @@ warning slice: extended indexing syntax
 * map
 * itertools.starmap
 
-
-## How to use `enumerate()`
+# Advanced homemade collection objects with collection.abc module
 
 ## References
 

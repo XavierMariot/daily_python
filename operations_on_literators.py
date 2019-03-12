@@ -18,7 +18,7 @@ print(d2)
 print(d3)
 
 # count items
-c = collections.Counter()
+c: collections.Counter = collections.Counter()
 c["hero"] += 1
 print(c)
 
@@ -73,3 +73,11 @@ my_cst = "carrots"
 my_string_generator = map(make_a_string, my_numbers, itertools.repeat(my_cst))
 my_list_of_str = list(my_string_generator)
 print(my_list_of_str)
+
+
+# same with iterable used as argument (here tuples)
+my_args = list(zip(my_numbers, itertools.repeat(my_cst)))
+print(my_args)
+my_string_generator_star = itertools.starmap(make_a_string, my_args)
+my_list_of_str_star = list(my_string_generator_star)
+print(my_list_of_str_star)
