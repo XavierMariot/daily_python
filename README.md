@@ -4,5 +4,6 @@ This project is meant to provide practical exemples of python standard library a
 ## Table of content
 
 * operations on iterators
+* collections and itertools for expressive code
 * smart logger designs
 * typing only to increase expressiveness

@@ -43,4 +43,6 @@ warning slice: extended indexing syntax
 
 ## How to use `enumerate()`
 
+## References
 
+Must read tools on iterators: https://docs.python.org/3.7/library/itertools.html#itertools-recipes 
