@@ -30,14 +30,27 @@ my_condition_1 = lambda x_: x_ ** 2 == 16
 
 a = None
 b = None
+a_bis = None
+b_bis = None
+
 try:
-    b = next(x for x in my_iterator if my_condition_1(x))
-    a = next(x for x in my_iterator if my_condition(x))
+    a = next(x for x in my_iterator if my_condition_1(x))
+    b = next(x for x in my_iterator if my_condition(x))
 except StopIteration:  # raised if end of iterator reached without a match
     pass
 if a:
     print(f"a == {a}")
 if b:
+    print(f"b == {b}")
+
+try:
+    a_bis = next(filter(my_condition_1, my_iterator))
+    b_bis = next(filter(my_condition, my_iterator))
+except StopIteration:  # raised if end of iterator reached without a match
+    pass
+if a_bis:
+    print(f"a == {a}")
+if b_bis:
     print(f"b == {b}")
 
 # find first index of an item in a list
@@ -81,3 +94,24 @@ print(my_args)
 my_string_generator_star = itertools.starmap(make_a_string, my_args)
 my_list_of_str_star = list(my_string_generator_star)
 print(my_list_of_str_star)
+
+# checking condition on all elements of a list
+def even(number: int):
+    return number % 2 == 0
+
+
+def odd(number: int):
+    return number % 2 == 1
+
+
+even_list = range(0, 10, 2)
+odd_list = range(1, 10, 2)
+l = range(10)
+
+# combing all/any with map for efficient testing
+print(all(map(even, even_list)))
+print(all(map(odd, odd_list)))
+print(all(map(even, l)))
+print(any(map(even, l)))
+print(any(map(even, l)))
+
