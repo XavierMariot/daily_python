@@ -55,3 +55,5 @@ warning slice: extended indexing syntax
 ## References
 
 Must read tools on iterators: https://docs.python.org/3.7/library/itertools.html#itertools-recipes 
+Details on sorted built-in: https://docs.python.org/3/howto/sorting.html#sortinghowto
+

@@ -1,4 +1,6 @@
 import typing
+import operator
+import random
 import collections
 import itertools
 
@@ -108,6 +110,7 @@ even_list = range(0, 10, 2)
 odd_list = range(1, 10, 2)
 l = range(10)
 
+
 # combing all/any with map for efficient testing
 print(all(map(even, even_list)))
 print(all(map(odd, odd_list)))
@@ -115,3 +118,34 @@ print(all(map(even, l)))
 print(any(map(even, l)))
 print(any(map(even, l)))
 
+
+# sort items in a list
+random_list = list(range(10))
+random_list = random_list * 2
+random.shuffle(random_list)
+print(random_list)
+
+
+class HomeMadeSort:
+    def __init__(self, number_):
+        self.number = number_
+
+    def __lt__(self, b: "HomeMadeSort"):
+        return self.number > b.number
+
+    def __le__(self, b: "HomeMadeSort"):
+        return self.__lt__(b) or operator.eq(self, b)
+
+
+one = HomeMadeSort(1)
+two = HomeMadeSort(2)
+print(operator.eq(one, two))
+print(operator.lt(one, two))
+print(operator.le(one, two))
+print(operator.gt(one, two))
+print(operator.ge(one, two))
+print(operator.ne(one, two))
+
+
+print(sorted(random_list))
+print(sorted(random_list, key=HomeMadeSort))
